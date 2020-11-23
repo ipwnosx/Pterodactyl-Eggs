@@ -1,0 +1,45 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1"
+    },
+    "exported_at": "2019-12-25T03:06:20-05:00",
+    "name": "NodeJS-12",
+    "author": "itznya10@gmail.com",
+    "description": "NodeJS 12",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:nodejs12",
+    "startup": ".\/start.sh",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"\",\r\n    \"userInteraction\": []\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\necho hi",
+            "container": "ubuntu:18.04",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Startup CMD",
+            "description": "Command to start bot!",
+            "env_variable": "STARTUP_CMD",
+            "default_value": "",
+            "user_viewable": 1,
+            "user_editable": 1,
+            "rules": "required|string|max:200"
+        },
+        {
+            "name": "Second CMD",
+            "description": "Second command",
+            "env_variable": "SECOND_CMD",
+            "default_value": "echo hi",
+            "user_viewable": 1,
+            "user_editable": 1,
+            "rules": "string|max:200"
+        }
+    ]
+}
